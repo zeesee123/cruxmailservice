@@ -12,6 +12,12 @@ exports.handler = async (event) => {
                }
            });
 
+           
+let filteredData = Object.keys(data)
+.filter(key => key !== "Form Type") // Exclude "Form Type"
+.map(key => `<li><strong>${key}:</strong> ${data[key]}</li>`)
+.join("");
+
         let info = await transporter.sendMail({
             from: `cruxcreativesolutionslead@gmail.com`,
             to: "reachout@cruxcreativesolutions.com",
@@ -20,7 +26,7 @@ exports.handler = async (event) => {
             <p>There is a New Lead For you From CRUX Website</p>
             
                    <ul>
-                   ${Object.keys(data).map((key) => `<li><strong>${key}:</strong> ${data[key]}</li>`).join("")}
+                   ${filteredData}
                    </ul>
                    <br>
                    <p>Please contact me as soon as possible via email or phone</p>`,
