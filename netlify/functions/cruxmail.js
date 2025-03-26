@@ -15,11 +15,15 @@ exports.handler = async (event) => {
         let info = await transporter.sendMail({
             from: `cruxcreativesolutionslead@gmail.com`,
             to: "reachout@cruxcreativesolutions.com",
-            subject: `New ${data["Form Type"]} Submission`,
-            html: `<h2>${data["Form Type"]}</h2>
+            subject: `New ${data["Form Type"]}`,
+            html: `<p>Hello CRUX</p>
+            <p>There is a New Lead For you From CRUX Website</p>
+                   <h2>${data["Form Type"]}</h2>
                    <ul>
                    ${Object.keys(data).map((key) => `<li><strong>${key}:</strong> ${data[key]}</li>`).join("")}
-                   </ul>`,
+                   </ul>
+                   <br>
+                   <p>Please contact me as soon as possible via email or phone</p>`,
         });
         //he
 
