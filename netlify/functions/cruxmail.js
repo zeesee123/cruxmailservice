@@ -7,8 +7,8 @@ exports.handler = async (event) => {
        let transporter = nodemailer.createTransport({
                service: 'gmail',  // Using Gmail SMTP service
                auth: {
-                   user: 'zubinchadha@gmail.com',  // Your Gmail email address
-                   pass: 'jydcahsvmthpnmiy'  // Use your app password here if using 2FA
+                   user: 'noreply@cruxcreativesolutions.com',  // Your Gmail email address
+                   pass: 'Target1000@'  // Use your app password here if using 2FA
                }
            });
 
