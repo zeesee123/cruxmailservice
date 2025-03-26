@@ -7,13 +7,13 @@ exports.handler = async (event) => {
        let transporter = nodemailer.createTransport({
                service: 'gmail',  // Using Gmail SMTP service
                auth: {
-                   user: 'zubinchadha@gmail.com',  // Your Gmail email address
-                   pass: 'jydcahsvmthpnmiy'  // Use your app password here if using 2FA
+                   user: 'cruxcreativesolutionslead@gmail.com',  // Your Gmail email address
+                   pass: 'ntteeicxsbfxsolm'  // Use your app password here if using 2FA
                }
            });
 
         let info = await transporter.sendMail({
-            from: `cruxzubinchadha@gmail.com`,
+            from: `cruxcreativesolutionslead@gmail.com`,
             to: "reachout@cruxcreativesolutions.com",
             subject: `New ${data["Form Type"]} Submission`,
             html: `<h2>${data["Form Type"]}</h2>
