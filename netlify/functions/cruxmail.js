@@ -13,7 +13,7 @@ exports.handler = async (event) => {
            });
 
         let info = await transporter.sendMail({
-            from: `cruxcreativesolutions`,
+            from: `cruxzubinchadha@gmail.com`,
             to: "reachout@cruxcreativesolutions.com",
             subject: `New ${data["Form Type"]} Submission`,
             html: `<h2>${data["Form Type"]}</h2>
