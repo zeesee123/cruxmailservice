@@ -33,6 +33,21 @@ let filteredData = Object.keys(data)
         });
         //he
 
+        
+
+        let userInfo = await transporter.sendMail({
+            from: `cruxcreativesolutionslead@gmail.com`,
+            to: userEmail,  // Send to the user
+            subject: "Thank you for reaching out!",
+            html: `<p>Dear ${data.name || "User"},</p>
+                   <p>Thank you for contacting us. We have received your request and will get back to you shortly.</p>
+                   <p><strong>Details Submitted:</strong></p>
+                   <ul>${filteredData}</ul>
+                   <p>We appreciate your interest!</p>
+                   <br>
+                   <p>Best Regards,<br>CRUX Creative Solutions</p>`,
+        });
+
         return {
             statusCode: 200,
             body: JSON.stringify({ message: "Email sent successfully", info }),
