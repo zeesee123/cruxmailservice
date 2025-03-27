@@ -37,7 +37,7 @@ let filteredData = Object.keys(data)
 
         let userInfo = await transporter.sendMail({
             from: `cruxcreativesolutionslead@gmail.com`,
-            to: data['email'],  // Send to the user
+            to: data["Email"],  // Send to the user
             subject: "Thank you for reaching out!",
             html: `<p>Dear ${data.name || "User"},</p>
                    <p>Thank you for contacting us. We have received your request and will get back to you shortly.</p>
